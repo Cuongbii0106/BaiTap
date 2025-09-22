@@ -4,10 +4,10 @@ let minEl = document.getElementById("min");
 let secEl = document.getElementById("sec");
 let popup = document.getElementById("popup");
 
-let countdown; // biến lưu setInterval
-let targetDate; // biến lưu ngày mục tiêu
+let countdown; 
+let targetDate; 
 
-// Hàm set ngày mục tiêu từ input
+
 function setTargetDate() {
   let input = document.getElementById("targetInput").value;
   if (!input) {
@@ -16,13 +16,13 @@ function setTargetDate() {
   }
   targetDate = new Date(input).getTime();
 
-  if (countdown) clearInterval(countdown); // reset nếu đã chạy trước đó
+  if (countdown) clearInterval(countdown); 
 
   countdown = setInterval(updateCountdown, 1000);
-  updateCountdown(); // chạy ngay lập tức
+  updateCountdown(); 
 }
 
-// Hàm cập nhật countdown
+
 function updateCountdown() {
   let now = new Date().getTime();
   let distance = targetDate - now;
@@ -45,7 +45,7 @@ function updateCountdown() {
   secEl.innerHTML = seconds < 10 ? "0" + seconds : seconds;
 }
 
-// Đóng popup
+
 function closePopup() {
   popup.style.display = "none";
 }

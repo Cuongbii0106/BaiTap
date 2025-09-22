@@ -30,13 +30,13 @@ nextBtn.addEventListener("click", () => {
   showImage(currentIndex);
 });
 
-// Chuyển ảnh trước
+
 prevBtn.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
   showImage(currentIndex);
 });
 
-// Đóng modal khi click ngoài ảnh
+
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) {
     lightbox.style.display = "none";

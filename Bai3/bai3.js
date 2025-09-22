@@ -10,7 +10,7 @@ const tableBody = document.querySelector("#employeeTable tbody");
 
     let currentSort = { column: null, asc: true };
 
-    // Hàm render bảng
+    
     function renderTable(data) {
       tableBody.innerHTML = "";
       data.forEach(emp => {
@@ -25,7 +25,7 @@ const tableBody = document.querySelector("#employeeTable tbody");
       });
     }
 
-    // Hàm lọc theo search
+    
     function filterData() {
       const keyword = searchBox.value.toLowerCase();
       const filtered = employees.filter(emp =>
@@ -35,10 +35,10 @@ const tableBody = document.querySelector("#employeeTable tbody");
       renderTable(filtered);
     }
 
-    // Hàm sắp xếp
+    
     function sortData(column) {
       if (currentSort.column === column) {
-        currentSort.asc = !currentSort.asc; // đổi chiều nếu cùng cột
+        currentSort.asc = !currentSort.asc; 
       } else {
         currentSort.column = column;
         currentSort.asc = true;
@@ -50,14 +50,14 @@ const tableBody = document.querySelector("#employeeTable tbody");
         return 0;
       });
 
-      filterData(); // áp dụng lại search + render
+      filterData(); 
     }
 
-    // Gắn sự kiện
+
     searchBox.addEventListener("input", filterData);
     document.querySelectorAll("#employeeTable th").forEach(th => {
       th.addEventListener("click", () => sortData(th.dataset.column));
     });
 
-    // Lần đầu load
+
     renderTable(employees);

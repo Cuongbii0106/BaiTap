@@ -34,7 +34,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Lightbox */
+
 .modal {
   display: none;
   position: fixed;
