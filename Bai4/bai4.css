@@ -1,0 +1,148 @@
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f,#30197d);
+    color: #fff;
+    position: relative;
+}
+.container{
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+
+}
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+
+}
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f14b75;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+
+}
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.clock span::after{   
+    font-size: 15px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#date::after{
+    content: 'Ngày';
+}
+#hrs::after{
+    content: 'Giờ';
+}
+#min::after{
+    content: 'Phút';
+}
+#sec::after{
+    content: 'Giây';
+}
+.popup {
+  display: none; 
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+    background: pink;
+    color: #333;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+.top-controls {
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.top-controls h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: pink;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  
+}
+
+.top-controls input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  margin-right: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.top-controls button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.top-controls button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
