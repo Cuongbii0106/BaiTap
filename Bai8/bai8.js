@@ -14,10 +14,12 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
     console.log('Strarted')
+    score = 0
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
+    answerButtuonElement.classList.remove('hide')
     setNextQuestion()
 }
 
@@ -68,7 +70,7 @@ function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     if (correct) {
-        score++   
+        score++
     }
     setStatusClass(document.body, correct)
     Array.from(answerButtuonElement.children).forEach(
@@ -79,25 +81,29 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        nextButton.classList.remove('hide')
+        clearStatusClass(document.body)
         questionElement.innerText = `Bạn được ${score} / ${shuffledQuestions.length} điểm`
+        startButton.innerText = 'Restart'
+        startButton.classList.remove('hide')   
+        nextButton.classList.add('hide')       
+        answerButtuonElement.classList.add('hide') 
+        
     }
 }
 
 let questions = [];
 
-fetch('bai7.json')
-  .then(res => {
-    if (!res.ok) throw new Error('HTTP error ' + res.status);
-    return res.json();
-  })
-  .then(data => {
-    questions = data;
-    console.log('Loaded questions:', questions.length);
-    // (tuỳ chọn) enable nút Start nếu bạn disable lúc đầu:
-    // startButton.disabled = false;
-  })
-  .catch(err => {
-    console.error('Failed to load questions.json', err);
-  });
+fetch('bai8.json')
+    .then(res => {
+        if (!res.ok) throw new Error('HTTP error ' + res.status);
+        return res.json();
+    })
+    .then(data => {
+        questions = data;
+        console.log('Loaded questions:', questions.length);
+        // (tuỳ chọn) enable nút Start nếu bạn disable lúc đầu:
+        // startButton.disabled = false;
+    })
+    .catch(err => {
+        console.error('Failed to load questions.json', err);
+    });
