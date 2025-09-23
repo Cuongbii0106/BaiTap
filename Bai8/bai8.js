@@ -11,6 +11,7 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
+
 function startGame() {
     console.log('Strarted')
     startButton.classList.add('hide')
@@ -46,23 +47,7 @@ function resetState() {
     }
 }
 
-function selectAnswer(e) {
-    const selectedButton = e.target
-    const correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerButtuonElement.children).forEach(
-        button => {
-            setStatusClass(button, button.dataset.correct)
-        }
-    )
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide')
-    } else {
-        startButton.innerText = 'Restart'
-        nextButton.classList.remove('hide')
-    }
 
-}
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
@@ -96,8 +81,6 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = 'Restart'
         nextButton.classList.remove('hide')
-
-        
         questionElement.innerText = `Bạn được ${score} / ${shuffledQuestions.length} điểm`
     }
 }
