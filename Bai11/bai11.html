@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pagination</title>
+  <link rel="stylesheet" href="bai11.css" />
+</head>
+<body>
+  <main>
+    <h2>Danh sách sản phẩm</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên sản phẩm</th>
+          <th>Giá</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <div class="pagination" role="navigation" aria-label="Pagination">
+      <button id="prevBtn" aria-label="Previous page">Prev</button>
+      <span>Trang <span id="pageNum">1</span> / <span id="totalPages">1</span></span>
+      <button id="nextBtn" aria-label="Next page">Next</button>
+
+      <label for="jumpInput" class="visually-hidden">Nhập trang</label>
+      <input type="number" id="jumpInput" placeholder="Nhập trang" min="1" style="width:80px;">
+      <button id="jumpBtn">Go</button>
+    </div>
+  </main>
+
+  <script defer src="bai11.js"></script>
+</body>
+</html>
