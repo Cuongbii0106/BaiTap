@@ -1,0 +1,24 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+padding: 20px;
+}
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(4, 145, 145); 
+}
+
+
+nav a.active {
+    font-weight: bolder;
+    color: rgb(14, 204, 204);
+}
+
+#app { 
+  margin-top: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+#app.fade-out { opacity: 0; transform: translateY(10px); }
+#app.fade-in  { opacity: 1; transform: translateY(0); }
