@@ -1,0 +1,105 @@
+/* Body */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  color: #fff;
+}
+
+/* Container đồng hồ */
+.stopwatch-container {
+  background: rgba(0,0,0,0.8);
+  padding: 30px 20px;
+  border-radius: 25px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Tiêu đề */
+.stopwatch-container h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* Đồng hồ */
+#time {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Nút bấm */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  flex: 1 1 45%;
+  margin: 5px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Màu riêng cho từng nút */
+#start { background: #28a745; }
+#pause { background: #dc3545; }
+#reset { background: #6c757d; }
+#lap { background: #ffc107; color: #000; }
+
+.buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Danh sách Lap */
+#laps {
+  list-style: none;
+  padding: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.5) transparent;
+}
+
+#laps li {
+  background: rgba(255,255,255,0.1);
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  font-family: monospace;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Custom scroll bar cho Chrome */
+#laps::-webkit-scrollbar {
+  width: 6px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 3px;
+}
