@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="bai17.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Password Generator</h2>
+
+    <div class="form-group">
+      <label for="length">Độ dài: </label>
+      <input type="number" id="length" min="8" max="20" value="12">
+    </div>
+
+    <div class="form-group">
+      <label><input type="checkbox" id="uppercase" checked> Chữ hoa (A–Z)</label>
+      <label><input type="checkbox" id="lowercase" checked> Chữ thường (a–z)</label>
+      <label><input type="checkbox" id="numbers" checked> Số (0–9)</label>
+      <label><input type="checkbox" id="symbols"> Ký tự đặc biệt (!@#$...)</label>
+    </div>
+
+    <button id="generate">Sinh mật khẩu</button>
+
+    <div class="output">
+      <input type="text" id="password" readonly>
+      <button id="copy">Copy</button>
+    </div>
+  </div>
+
+  <script src="bai17.js"></script>
+</body>
+</html>
