@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chart Visualization - Chart.js</title>
+  
+  <link rel="stylesheet" href="bai19.css">
+  <!-- Link Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>Biểu đồ Doanh Số Theo Tháng</h2>
+
+  <label for="chartType">Chọn loại biểu đồ:</label>
+  <select id="chartType">
+    <option value="bar">Bar</option>
+    <option value="line">Line</option>
+    <option value="pie">Pie</option>
+  </select>
+
+  <div class="chart-container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  
+  <script src=" bai19.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Lac Troi",
+    "src": "music/music1.mp3",
+    "cover": "images/cover1.jpg"
+  },
+  {
+    "title": "Hay Trao Cho Anh",
+    "src": "music/music2.mp3",
+    "cover": "images/cover2.jpg"
+  },
+  {
+    "title": "Chac Ai Do Se Ve",
+    "src": "music/song3.mp3",
+    "cover": "images/cover_lactroi.jpg"
+  }
+]
