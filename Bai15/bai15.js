@@ -2,7 +2,7 @@ const fileInput = document.getElementById("file-input");
 const container = document.getElementById("container");
 
 function previewFiles() {
-  container.innerHTML = ""; // clear cũ
+  container.innerHTML = "";
 
   const files = fileInput.files;
 
