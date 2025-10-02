@@ -1,0 +1,81 @@
+body {
+font-family: Arial, sans-serif;
+display: flex;
+justify-content: center;
+margin-top: 30px;
+background: #f4f4f4;
+}
+
+
+.calendar {
+width: 350px;
+background: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+background: #3498db;
+color: white;
+}
+
+
+.header button {
+background: transparent;
+border: none;
+font-size: 20px;
+color: white;
+cursor: pointer;
+}
+
+
+.weekdays, .days {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+text-align: center;
+}
+
+
+.weekdays div {
+background: #eee;
+padding: 10px;
+font-weight: bold;
+}
+
+
+.days div {
+padding: 15px;
+border: 1px solid #ddd;
+cursor: pointer;
+position: relative;
+}
+
+
+.days div.today {
+background: #3498db;
+color: white;
+border-radius: 50%;
+}
+
+
+.days div.event {
+background: #f9e79f;
+}
+
+
+.tooltip {
+position: absolute;
+background: #333;
+color: white;
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 12px;
+display: none;
+pointer-events: none;
+}
