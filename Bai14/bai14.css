@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background: #007BFF;
+  color: white;
+}
+
+td.editing {
+  background: #fff3cd;
+}
+
+input.inline-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+}
